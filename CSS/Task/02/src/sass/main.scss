@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    .nav-title {
+        h1 {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+    }
+
+    .nav-link {
+        border: 1px solid black {
+            radius: 5rem;
+        }
+        padding: 10px 100px;
+
+        ul {
+            display: flex;
+            gap: 50px;
+            list-style: none;
+
+            li a {
+                color: black;
+                text: {
+                    decoration: none;
+                }
+            }
+        }
+    }
+
+    .nav-action {
+        padding: 10px 30px;
+        border: 1px solid black {
+            radius: 5rem;
+        }
+
+        a {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            text: {
+                decoration: none;
+            }
+        }
+    }
+}
+
+header {
+    display: flex;
+
+    .hero,
+    .gallery {
+        width: 50%;
+        height: 60vh;
+        padding: 20px;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .hero-title {
+            h1 {
+                &:nth-child(1) {
+                    display: flex;
+                    gap: 20px;
+                i {
+                    transform: rotate(30deg);
+                }
+                }
+            }
+        }
+        .hero-description {
+        }
+        .hero-info {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            .buy {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                position: relative;
+                .link {
+                    background-color: black;
+                    padding: 10px 40px;
+                    border: {
+                        radius: 3rem;
+                    }
+                    &::after {
+                        content: "";
+                        width: 20px;
+                        height: 10px;
+                        background-color: black;
+                        display: block;
+                        position: absolute;
+                        top: 36%;
+                        right: 30px;
+
+                    }
+                    a {
+                        color: white;
+                        text: {
+                            decoration: none;
+                        }
+                    }
+                }
+                .icon {
+                    background-color: black;
+                    border: {
+                        radius: 50%;
+                    }
+                    padding: 3px;
+                    i {
+                        width: 30px;
+                        aspect-ratio: 1/1;
+                        background-color: white;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: black;
+                        border: {
+                            radius: 50%;
+                        }
+                        transform: rotate(-40deg);
+                    }
+                }
+            }
+            .rate {
+                display: flex;
+                gap: 30px;
+                position: relative;
+
+                b {
+                    font: {
+                        size: 2rem;
+                    }
+                    sum {
+                        position: absolute;
+                        top: 0;
+                        display: inline-block;
+                        transform: scale(0.5);
+                    }
+                }
+
+                .bo {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    &::after {
+                        content: "";
+                        display: block;
+                        height: 30px;
+                        width: 1px;
+                        background-color: black;
+                        position: absolute;
+                        top: 2.8px;
+                        left: 70px;
+                        border: {
+                            radius: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .gallery {
+        .top-image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            .left-image{
+                display: flex;
+                flex-direction: column;
+                .top-image,.bottom-image {
+                    width: 250px;
+                    height: 15vh;
+                    border: {
+                        radius: 1rem;
+                    }
+                    background-color: grey;
+                }
+                .top-image{
+                }
+                .bottom-image{
+                }
+            }
+            .right-image{
+                .image{
+                    width: 300px;
+                    height: 29vh;
+                    background-color: grey;
+                    border: {
+                        radius: 1rem;
+                    }
+                }
+            }
+        }
+        .bottom-image{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: {
+                top: 10px;
+            }
+            .right-image, .left-image {
+                width: 280px;
+                height: 20vh;
+                background-color: grey;
+                border: {
+                    radius: 1rem;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    .foot-list {
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: grey;
+        width: 80%;
+        height: 100px;
+        gap: 100px;
+        padding: 15px;
+        border: {
+            top-left-radius: 1rem;
+            top-right-radius: 1rem;
+        }
+
+        .foot-item {
+            font: {
+                size: 2rem;
+            }
+        }
+    }
+}

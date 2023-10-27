@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+nav .nav-title h1 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+nav .nav-link {
+  border: 1px solid black;
+  border-radius: 5rem;
+  padding: 10px 100px;
+}
+nav .nav-link ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+nav .nav-link ul li a {
+  color: black;
+  text-decoration: none;
+}
+nav .nav-action {
+  padding: 10px 30px;
+  border: 1px solid black;
+  border-radius: 5rem;
+}
+nav .nav-action a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+}
+header .hero,
+header .gallery {
+  width: 50%;
+  height: 60vh;
+  padding: 20px;
+}
+header .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+header .hero .hero-title h1:nth-child(1) {
+  display: flex;
+  gap: 20px;
+}
+header .hero .hero-title h1:nth-child(1) i {
+  transform: rotate(30deg);
+}
+header .hero .hero-info {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+header .hero .hero-info .buy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+header .hero .hero-info .buy .link {
+  background-color: black;
+  padding: 10px 40px;
+  border-radius: 3rem;
+}
+header .hero .hero-info .buy .link::after {
+  content: "";
+  width: 20px;
+  height: 10px;
+  background-color: black;
+  display: block;
+  position: absolute;
+  top: 36%;
+  right: 30px;
+}
+header .hero .hero-info .buy .link a {
+  color: white;
+  text-decoration: none;
+}
+header .hero .hero-info .buy .icon {
+  background-color: black;
+  border-radius: 50%;
+  padding: 3px;
+}
+header .hero .hero-info .buy .icon i {
+  width: 30px;
+  aspect-ratio: 1/1;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  border-radius: 50%;
+  transform: rotate(-40deg);
+}
+header .hero .hero-info .rate {
+  display: flex;
+  gap: 30px;
+  position: relative;
+}
+header .hero .hero-info .rate b {
+  font-size: 2rem;
+}
+header .hero .hero-info .rate b sum {
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  transform: scale(0.5);
+}
+header .hero .hero-info .rate .bo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .hero .hero-info .rate .bo::after {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 1px;
+  background-color: black;
+  position: absolute;
+  top: 2.8px;
+  left: 70px;
+  border-radius: 100%;
+}
+header .gallery .top-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+header .gallery .top-image .left-image {
+  display: flex;
+  flex-direction: column;
+}
+header .gallery .top-image .left-image .top-image, header .gallery .top-image .left-image .bottom-image {
+  width: 250px;
+  height: 15vh;
+  border-radius: 1rem;
+  background-color: grey;
+}
+header .gallery .top-image .right-image .image {
+  width: 300px;
+  height: 29vh;
+  background-color: grey;
+  border-radius: 1rem;
+}
+header .gallery .bottom-image {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+header .gallery .bottom-image .right-image, header .gallery .bottom-image .left-image {
+  width: 280px;
+  height: 20vh;
+  background-color: grey;
+  border-radius: 1rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+footer .foot-list {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: grey;
+  width: 80%;
+  height: 100px;
+  gap: 100px;
+  padding: 15px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+footer .foot-list .foot-item {
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=main.css.map */
