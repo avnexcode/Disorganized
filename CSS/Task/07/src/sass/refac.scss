@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Onest:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// Font Variables
+$font-caveat: "Caveat", cursive;
+$font-poppins: "Poppins", sans-serif;
+$font-onest: "Onest", sans-serif;
+
+// Color Variables
+$primary-color: #a9caf3;
+$secondary-color: rgb(0, 98, 255);
+
+// Reset Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Navigation Styles
+nav {
+    padding: 10px 20px;
+    font-family: $font-poppins;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // h1 {
+    //     // Add styles for the heading if needed
+    // }
+
+    ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        align-items: center;
+
+        li {
+            &:hover {
+                a {
+                    font-weight: 600;
+                }
+            }
+
+            &:nth-child(2) select {
+                cursor: pointer;
+                &:hover {
+                    font-weight: 600;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+
+                font-weight: 500;
+                font-size: 1.2rem;
+                font-family: $font-poppins;
+                border: none;
+            }
+
+            a {
+                font-weight: 500;
+                font-size: 1.2rem;
+                color: black;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .action {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+
+        a {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: black;
+            text-decoration: none;
+
+            &:hover {
+                font-weight: 600;
+            }
+
+            &:nth-child(2) {
+                color: white;
+                background-color: $primary-color;
+                padding: 3px 13px;
+                border-radius: 2rem;
+                font-size: 1.1rem;
+
+                &:hover {
+                    background-color: $secondary-color;
+                }
+            }
+        }
+    }
+}

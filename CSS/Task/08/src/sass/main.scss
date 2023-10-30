@@ -1,0 +1,585 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Onest:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+// Responsive Breakpoint
+$media-sm: 640px;
+$media-md: 768px;
+$media-lg: 1024px;
+$media-xl: 1280px;
+
+// @mixin responsive-design($breakpoint, $style) {
+//         @media only screen and (min-width: $breakpoint) {
+//         }
+// }
+
+// Font Variable
+$font-caveat: "Caveat", cursive;
+$font-poppins: "Poppins", sans-serif;
+$font-onest: "Onest", sans-serif;
+
+// Color Variable
+$primary-color: #ca2625;
+$secondary-color: #5e2751;
+$third-color: #b0b0b0;
+$fourth-color: #f7f7f7;
+
+section#main-page {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    max-height: 100vh;
+    overflow: hidden;
+    aside {
+        display: none;
+        @media only screen and (min-width: $media-lg) {
+            display: block;
+        }
+        position: relative;
+        padding: 0 {
+            left: 30px;
+            right: 10px;
+        }
+        width: 15%;
+        .title {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            h1 {
+                &:nth-child(1) {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    color: $primary-color;
+                    font: {
+                        size: 3rem;
+                        family: $font-caveat;
+                    }
+                    i {
+                        font: {
+                            size: 2rem;
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    font: {
+                        size: 1.5rem;
+                        family: $font-poppins;
+                    }
+                    padding: {
+                        left: 10px;
+                    }
+                }
+                &:nth-child(3) {
+                    display: flex;
+                    align-items: center;
+                    background: rgb(207, 31, 34);
+                    background: linear-gradient(81deg, rgba(207, 31, 34, 1) 0%, rgba(94, 39, 81, 1) 100%);
+                    color: white;
+                    padding: 15px;
+                    gap: 10px;
+                    position: relative;
+                    font: {
+                        size: 0.8rem;
+                        family: $font-onest;
+                    }
+
+                    i.fa-angle-right {
+                        position: absolute;
+                        right: 20px;
+                    }
+                }
+            }
+        }
+        nav {
+            margin: {
+                top: 20px;
+            }
+            table {
+                padding: {
+                    left: 10px;
+                }
+                tr {
+                    cursor: pointer;
+                    &:hover {
+                        a {
+                            color: black;
+                        }
+                    }
+                    td {
+                        padding: 5px;
+                        a {
+                            font: {
+                                size: 0.9rem;
+                                family: $font-poppins;
+                            }
+                            color: $third-color;
+                            text: {
+                                decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .action {
+            position: absolute;
+            bottom: 0;
+            width: 80%;
+            border: {
+                top: 1px solid $third-color;
+            }
+            padding: {
+                top: 20px;
+            }
+            table {
+                padding: {
+                    top: 20px;
+                    left: 10px;
+                }
+                tr {
+                    &:hover {
+                        a {
+                            color: black;
+                        }
+                    }
+                    cursor: pointer;
+                    td {
+                        padding: 5px;
+                        a {
+                            color: black;
+                            font: {
+                                size: 0.9rem;
+                                family: $font-poppins;
+                            }
+                            color: $third-color;
+                            text: {
+                                decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section#main-content {
+        overflow: auto;
+        width: 100%;
+        @media only screen and (min-width: $media-lg) {
+            width: 85%;
+        }
+        padding: 0 {
+            right: 30px;
+            left: 20px;
+        }
+        nav {
+            background-color: white;
+            position: sticky;
+            top: 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            .search-bar {
+                width: 81.5%;
+                padding: 5px;
+                background-color: $fourth-color;
+                form {
+                    display: flex;
+                    align-items: center;
+
+                    select {
+                        display: block;
+                        border: none;
+                        padding: 10px {
+
+                        }
+                    }
+                    .search {
+                        width: 100%;
+                        input {
+                            padding: 10px;
+                            border: none;
+                            background-color: transparent;
+                            width: 100%;
+                            font: {
+                                size: 0.9rem;
+                                family: $font-poppins;
+                            }
+                            &:focus {
+                                outline: none;
+                            }
+                            &::placeholder {
+                                font: {
+                                    family: $font-poppins;
+                                    size: 0.9rem;
+                                }
+                            }
+                        }
+                    }
+                    .submit {
+                        button {
+                            padding: 10px;
+                            border: none;
+                            background-color: transparent;
+                            font: {
+                                size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 35px;
+                list-style: none;
+                width: 15%;
+
+                li {
+                    font: {
+                        family: $font-onest;
+                    }
+                    &:nth-child(3) {
+                        display: flex;
+                        flex-direction: column;
+                        span {
+                            font: {
+                                size: 1rem;
+                            }
+                            padding: {
+                                left: 8px;
+                            }
+                        }
+                        div {
+                            width: 5px;
+                            height: 5px;
+                            background-color: $primary-color;
+                            border: {
+                                radius: 50%;
+                            }
+                            margin: {
+                                left: 6px;
+                            }
+                            transform: translateY(10px);
+                        }
+                    }
+                    a {
+                        display: flex;
+                        color: black;
+                        font: {
+                            size: 1.3rem;
+                        }
+                        text: {
+                            decoration: none;
+                        }
+                    }
+                }
+            }
+            .profile {
+                border: {
+                    left: 2px solid $third-color;
+                }
+                width: 90px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 9px;
+                position: relative;
+                div.profile-image {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $primary-color;
+                    width: 40%;
+                    aspect-ratio: 1/1;
+                    border: {
+                        radius: 50%;
+                    }
+                    color: whitesmoke;
+                    font: {
+                        size: 1rem;
+                    }
+                }
+                div.drop-down {
+                    cursor: pointer;
+                    font: {
+                        size: 0.7rem;
+                    }
+                }
+            }
+        }
+        header {
+            margin: {
+                top: 35px;
+            }
+            display: flex;
+            width: 100%;
+            gap: 10px;
+            justify-content: space-between;
+            .hero {
+                width: 100%;
+                background-color: $fourth-color;
+                display: flex;
+                &-image {
+                    img {
+                        width: 250px;
+                        height: 100%;
+                    }
+                }
+                &-detail {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 30px {
+                        bottom: 10px;
+                        right: 10px;
+                    }
+                    width: 100%;
+                    font: {
+                        family: $font-poppins;
+                    }
+                    .detail-1 {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        span {
+                            width: 30px;
+                            height: 3px;
+                            display: inline-block;
+                            background-color: black;
+                        }
+                    }
+                    .detail-2 {
+                        h1 {
+                            font: {
+                                size: 2rem;
+                            }
+                        }
+                    }
+                    .detail-3 {
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        .brand {
+                            display: flex;
+                            align-items: center;
+                            gap: 40px;
+                            .brand-image {
+                                img {
+                                    width: 50px;
+                                }
+                            }
+                        }
+                        .action {
+                            button {
+                                border: none;
+                                background-color: black;
+                                color: white;
+                                width: 40px;
+                                aspect-ratio: 1/1;
+                            }
+                        }
+                    }
+                }
+            }
+            .event {
+                .event-image {
+                    height: 100%;
+                    img {
+                        width: 250px;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        main {
+            margin: {
+                top: 30px;
+            }
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font: {
+                    family: $font-onest;
+                }
+                .title {
+                    display: flex;
+                    gap: 10px;
+                    align-items: flex-end;
+                    h1 {
+                        color: rgba(0, 0, 0, 0.5);
+                        font: {
+                            size: 1.4rem;
+                            weight: 400;
+                        }
+                        span {
+                            font: {
+                                weight: 600;
+                            }
+                            color: black;
+                        }
+                        a {
+                            padding: {
+                                left: 10px;
+                            }
+                            color: $third-color;
+                            text: {
+                                decoration: none;
+                            }
+                            font: {
+                                size: 0.8rem;
+                            }
+                        }
+                    }
+                }
+                .action {
+                    button {
+                        width: 30px;
+                        border: none;
+                        background-color: transparent;
+                        color: $third-color;
+                        font: {
+                            size: 1.5rem;
+                        }
+                    }
+                }
+            }
+            .card-list {
+                padding: {
+                    bottom: 5px;
+                }
+                width: 100%;
+                overflow-x: auto;
+                margin: {
+                    top: 1.5rem;
+                    bottom: 1rem;
+                }
+                display: flex;
+                gap: 10px;
+                &::-webkit-scrollbar {
+                    height: 8px;
+                }
+                &::-webkit-scrollbar-track {
+                    height: 50px;
+                    width: 100%;
+                    background-color: $fourth-color;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: $third-color;
+                    width: 100px;
+                    border-radius: 5rem;
+                }
+                .card {
+                    cursor: pointer;
+                    border: 3px solid $fourth-color;
+                    padding: 10px;
+                    font: {
+                        family: $font-onest;
+                        size: 0.8rem;
+                    }
+                    &:hover {
+                        border: 3px solid $third-color;
+                    }
+                    &-image {
+                        background-color: $fourth-color;
+                        padding: 10px;
+                        min-height: 300px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        position: relative;
+                        .shipping {
+                            position: absolute;
+                            top: 10px;
+                            left: 10px;
+                        }
+                        .discount {
+                            position: absolute;
+                            top: 10px;
+                            left: 10px;
+                            i {
+                                padding: 8px;
+                                aspect-ratio: 1/1;
+                                background-color: black;
+                                color: white;
+                                font: {
+                                    size: 0.9rem;
+                                }
+                            }
+                        }
+                        .image {
+                            display: flex;
+                            align-items: center;
+                            img {
+                                // border: 1px solid black;
+                                width: 200px;
+                            }
+                        }
+                        div {
+                            display: flex;
+                            gap: 3px;
+                            justify-content: center;
+                            span {
+                                background-color: $third-color;
+                                width: 30px;
+                                height: 4px;
+                                display: inline-block;
+                                border: {
+                                    radius: 3rem;
+                                }
+                                &:hover {
+                                    background-color: black;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                    &-detail {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        // padding: 10px;
+                        .title {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+                            margin: {
+                                top: 9px;
+                            }
+                        }
+                        .color-price {
+                            display: flex;
+                            justify-content: space-between;
+                            margin: {
+                                top: 9px;
+                            }
+                            .color-list {
+                                display: flex;
+                                gap: 3px;
+                                .color {
+                                    width: 10px;
+                                    height: 10px;
+                                    background-color: red;
+                                }
+                            }
+                            .price {
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

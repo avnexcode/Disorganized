@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Onest:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  padding: 20px 50px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  align-items: center;
+}
+nav ul li:hover a {
+  font-weight: 600;
+}
+nav ul li:nth-child(2) select {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  border: none;
+}
+nav ul li:nth-child(2) select:hover {
+  font-weight: 600;
+}
+nav ul li:nth-child(2) select:focus {
+  outline: none;
+}
+nav ul li a {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: black;
+  text-decoration: none;
+}
+nav .action {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+nav .action a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+nav .action a:hover {
+  font-weight: 600;
+}
+nav .action a:nth-child(2) {
+  color: white;
+  background-color: #a9caf3;
+  padding: 5px 13px;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+}
+nav .action a:nth-child(2):hover {
+  background-color: rgb(0, 98, 255);
+}
+
+header {
+  margin-top: 15px;
+  min-height: 85vh;
+  font-family: "Onest", sans-serif;
+  padding: 0 50px;
+  display: flex;
+}
+header .header-side-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 20px;
+  width: 50%;
+}
+header .header-side-left .top-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+header .header-side-left .top-content .title h1 {
+  line-height: 100%;
+  font-size: 4.5rem;
+  font-weight: 300;
+}
+header .header-side-left .top-content .title h1:nth-child(1) span.pill {
+  display: inline-block;
+  width: 120px;
+  height: 45px;
+  margin-right: 15px;
+  border-radius: 2rem;
+  background-color: #f5bce5;
+}
+header .header-side-left .top-content .title div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+header .header-side-left .top-content .title div a {
+  font-size: 0.9rem;
+  padding: 10px 15px;
+  border: 2px solid black;
+  border-radius: 3rem;
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .header-side-left .top-content .action {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header .header-side-left .top-content .action a:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #a9caf3;
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding: 15px 35px;
+  border-radius: 2rem;
+}
+header .header-side-left .top-content .action a:nth-child(1) i {
+  transform: rotate(-45deg);
+}
+header .header-side-left .top-content .action a:nth-child(1):hover {
+  background-color: rgb(0, 98, 255);
+}
+header .header-side-left .top-content .action a:nth-child(2) {
+  color: black;
+}
+header .header-side-left .top-content .action a:nth-child(2):hover {
+  font-weight: bold;
+}
+header .header-side-left .bottom-content {
+  width: 72%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+header .header-side-left .bottom-content p {
+  font-size: 0.95rem;
+}
+header .header-side-left .bottom-content .partner-list ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+header .header-side-left .bottom-content .partner-list ul li {
+  font-size: 1.5rem;
+}
+header .header-side-left .bottom-content .partner-list ul li:nth-child(1) a {
+  font-weight: bold;
+}
+header .header-side-left .bottom-content .partner-list ul li:nth-child(4) a {
+  font-weight: bold;
+}
+header .header-side-left .bottom-content .partner-list ul li a {
+  color: black;
+  text-decoration: none;
+}
+header .header-side-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+header .header-side-right .top-content {
+  position: relative;
+}
+header .header-side-right .top-content img {
+  width: 100%;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+header .header-side-right .top-content h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 100%;
+  padding: 25px;
+  padding-top: 30px;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 200;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header .header-side-right .top-content p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 25px;
+  padding-bottom: 30px;
+  color: white;
+}
+header .header-side-right .top-content button {
+  padding: 25px;
+  padding-bottom: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: none;
+  background-color: transparent;
+}
+header .header-side-right .top-content button i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  color: black;
+  width: 50px;
+  aspect-ratio: 1/1;
+  font-size: 1.6rem;
+  transform: rotate(-45deg);
+}
+header .header-side-right .bottom-content {
+  display: flex;
+  height: 100%;
+  gap: 20px;
+}
+header .header-side-right .bottom-content .bottom-left-content {
+  position: relative;
+}
+header .header-side-right .bottom-content .bottom-left-content img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 2rem;
+  height: 100%;
+}
+header .header-side-right .bottom-content .bottom-left-content .accord {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 35px 50px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+header .header-side-right .bottom-content .bottom-left-content .accord .action {
+  display: flex;
+  justify-content: space-between;
+}
+header .header-side-right .bottom-content .bottom-left-content .accord .action button {
+  font-size: 1rem;
+  font-weight: bold;
+}
+header .header-side-right .bottom-content .bottom-left-content .accord .action button:nth-child(1) {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 2rem;
+  background-color: white;
+}
+header .header-side-right .bottom-content .bottom-left-content .accord .action button:nth-child(2) {
+  width: 40px;
+  aspect-ratio: 1/1;
+  border: none;
+  border-radius: 50%;
+}
+header .header-side-right .bottom-content .bottom-left-content .accord .action button:nth-child(2) i {
+  transform: rotate(-45deg);
+}
+header .header-side-right .bottom-content .bottom-left-content .accord .desc {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+header .header-side-right .bottom-content .bottom-left-content .accord .desc h3 {
+  font-weight: lighter;
+  font-size: 1.4rem;
+  color: white;
+}
+header .header-side-right .bottom-content .bottom-left-content .accord .desc p {
+  font-size: 0.8rem;
+  color: white;
+}
+header .header-side-right .bottom-content .bottom-right-content {
+  position: relative;
+}
+header .header-side-right .bottom-content .bottom-right-content img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 2rem;
+  height: 100%;
+}
+header .header-side-right .bottom-content .bottom-right-content .accord {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 35px 50px;
+  position: absolute;
+  top: 0;
+}
+header .header-side-right .bottom-content .bottom-right-content .accord .action {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+header .header-side-right .bottom-content .bottom-right-content .accord .action button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 2rem;
+  background-color: white;
+}
+header .header-side-right .bottom-content .bottom-right-content .accord .action .profile-list {
+  display: flex;
+}
+header .header-side-right .bottom-content .bottom-right-content .accord .action .profile-list .profile {
+  width: 40px;
+  aspect-ratio: 1/1;
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 50%;
+  margin-left: -10px;
+}
+header .header-side-right .bottom-content .bottom-right-content .accord .desc {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+header .header-side-right .bottom-content .bottom-right-content .accord .desc h3 {
+  font-weight: lighter;
+  font-size: 4rem;
+  color: white;
+}
+header .header-side-right .bottom-content .bottom-right-content .accord .desc p {
+  font-size: 0.8rem;
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Onest:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+section#main-page {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  max-height: 100vh;
+  overflow: hidden;
+}
+section#main-page aside {
+  display: none;
+  position: relative;
+  padding: 0;
+  padding-left: 30px;
+  padding-right: 10px;
+  width: 15%;
+}
+@media only screen and (min-width: 1024px) {
+  section#main-page aside {
+    display: block;
+  }
+}
+section#main-page aside .title {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+section#main-page aside .title h1:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #ca2625;
+  font-size: 3rem;
+  font-family: "Caveat", cursive;
+}
+section#main-page aside .title h1:nth-child(1) i {
+  font-size: 2rem;
+}
+section#main-page aside .title h1:nth-child(2) {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  padding-left: 10px;
+}
+section#main-page aside .title h1:nth-child(3) {
+  display: flex;
+  align-items: center;
+  background: rgb(207, 31, 34);
+  background: linear-gradient(81deg, rgb(207, 31, 34) 0%, rgb(94, 39, 81) 100%);
+  color: white;
+  padding: 15px;
+  gap: 10px;
+  position: relative;
+  font-size: 0.8rem;
+  font-family: "Onest", sans-serif;
+}
+section#main-page aside .title h1:nth-child(3) i.fa-angle-right {
+  position: absolute;
+  right: 20px;
+}
+section#main-page aside nav {
+  margin-top: 20px;
+}
+section#main-page aside nav table {
+  padding-left: 10px;
+}
+section#main-page aside nav table tr {
+  cursor: pointer;
+}
+section#main-page aside nav table tr:hover a {
+  color: black;
+}
+section#main-page aside nav table tr td {
+  padding: 5px;
+}
+section#main-page aside nav table tr td a {
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+  color: #b0b0b0;
+  text-decoration: none;
+}
+section#main-page aside .action {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  border-top: 1px solid #b0b0b0;
+  padding-top: 20px;
+}
+section#main-page aside .action table {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+section#main-page aside .action table tr {
+  cursor: pointer;
+}
+section#main-page aside .action table tr:hover a {
+  color: black;
+}
+section#main-page aside .action table tr td {
+  padding: 5px;
+}
+section#main-page aside .action table tr td a {
+  color: black;
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+  color: #b0b0b0;
+  text-decoration: none;
+}
+section#main-page section#main-content {
+  overflow: auto;
+  width: 100%;
+  padding: 0;
+  padding-right: 30px;
+  padding-left: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  section#main-page section#main-content {
+    width: 85%;
+  }
+}
+section#main-page section#main-content nav {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+section#main-page section#main-content nav .search-bar {
+  width: 81.5%;
+  padding: 5px;
+  background-color: #f7f7f7;
+}
+section#main-page section#main-content nav .search-bar form {
+  display: flex;
+  align-items: center;
+}
+section#main-page section#main-content nav .search-bar form select {
+  display: block;
+  border: none;
+  padding: 10px;
+}
+section#main-page section#main-content nav .search-bar form .search {
+  width: 100%;
+}
+section#main-page section#main-content nav .search-bar form .search input {
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+}
+section#main-page section#main-content nav .search-bar form .search input:focus {
+  outline: none;
+}
+section#main-page section#main-content nav .search-bar form .search input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+}
+section#main-page section#main-content nav .search-bar form .submit button {
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+}
+section#main-page section#main-content nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  list-style: none;
+  width: 15%;
+}
+section#main-page section#main-content nav ul li {
+  font-family: "Onest", sans-serif;
+}
+section#main-page section#main-content nav ul li:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+}
+section#main-page section#main-content nav ul li:nth-child(3) span {
+  font-size: 1rem;
+  padding-left: 8px;
+}
+section#main-page section#main-content nav ul li:nth-child(3) div {
+  width: 5px;
+  height: 5px;
+  background-color: #ca2625;
+  border-radius: 50%;
+  margin-left: 6px;
+  transform: translateY(10px);
+}
+section#main-page section#main-content nav ul li a {
+  display: flex;
+  color: black;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+section#main-page section#main-content nav .profile {
+  border-left: 2px solid #b0b0b0;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  position: relative;
+}
+section#main-page section#main-content nav .profile div.profile-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ca2625;
+  width: 40%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  color: whitesmoke;
+  font-size: 1rem;
+}
+section#main-page section#main-content nav .profile div.drop-down {
+  cursor: pointer;
+  font-size: 0.7rem;
+}
+section#main-page section#main-content header {
+  margin-top: 35px;
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  justify-content: space-between;
+}
+section#main-page section#main-content header .hero {
+  width: 100%;
+  background-color: #f7f7f7;
+  display: flex;
+}
+section#main-page section#main-content header .hero-image img {
+  width: 250px;
+  height: 100%;
+}
+section#main-page section#main-content header .hero-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+section#main-page section#main-content header .hero-detail .detail-1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+section#main-page section#main-content header .hero-detail .detail-1 span {
+  width: 30px;
+  height: 3px;
+  display: inline-block;
+  background-color: black;
+}
+section#main-page section#main-content header .hero-detail .detail-2 h1 {
+  font-size: 2rem;
+}
+section#main-page section#main-content header .hero-detail .detail-3 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+section#main-page section#main-content header .hero-detail .detail-3 .brand {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+section#main-page section#main-content header .hero-detail .detail-3 .brand .brand-image img {
+  width: 50px;
+}
+section#main-page section#main-content header .hero-detail .detail-3 .action button {
+  border: none;
+  background-color: black;
+  color: white;
+  width: 40px;
+  aspect-ratio: 1/1;
+}
+section#main-page section#main-content header .event .event-image {
+  height: 100%;
+}
+section#main-page section#main-content header .event .event-image img {
+  width: 250px;
+  height: 100%;
+}
+section#main-page section#main-content main {
+  margin-top: 30px;
+}
+section#main-page section#main-content main nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Onest", sans-serif;
+}
+section#main-page section#main-content main nav .title {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+section#main-page section#main-content main nav .title h1 {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+section#main-page section#main-content main nav .title h1 span {
+  font-weight: 600;
+  color: black;
+}
+section#main-page section#main-content main nav .title h1 a {
+  padding-left: 10px;
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+section#main-page section#main-content main nav .action button {
+  width: 30px;
+  border: none;
+  background-color: transparent;
+  color: #b0b0b0;
+  font-size: 1.5rem;
+}
+section#main-page section#main-content main .card-list {
+  padding-bottom: 5px;
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 10px;
+}
+section#main-page section#main-content main .card-list::-webkit-scrollbar {
+  height: 8px;
+}
+section#main-page section#main-content main .card-list::-webkit-scrollbar-track {
+  height: 50px;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+section#main-page section#main-content main .card-list::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  width: 100px;
+  border-radius: 5rem;
+}
+section#main-page section#main-content main .card-list .card {
+  cursor: pointer;
+  border: 3px solid #f7f7f7;
+  padding: 10px;
+  font-family: "Onest", sans-serif;
+  font-size: 0.8rem;
+}
+section#main-page section#main-content main .card-list .card:hover {
+  border: 3px solid #b0b0b0;
+}
+section#main-page section#main-content main .card-list .card-image {
+  background-color: #f7f7f7;
+  padding: 10px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+section#main-page section#main-content main .card-list .card-image .shipping {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+section#main-page section#main-content main .card-list .card-image .discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+section#main-page section#main-content main .card-list .card-image .discount i {
+  padding: 8px;
+  aspect-ratio: 1/1;
+  background-color: black;
+  color: white;
+  font-size: 0.9rem;
+}
+section#main-page section#main-content main .card-list .card-image .image {
+  display: flex;
+  align-items: center;
+}
+section#main-page section#main-content main .card-list .card-image .image img {
+  width: 200px;
+}
+section#main-page section#main-content main .card-list .card-image div {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+}
+section#main-page section#main-content main .card-list .card-image div span {
+  background-color: #b0b0b0;
+  width: 30px;
+  height: 4px;
+  display: inline-block;
+  border-radius: 3rem;
+}
+section#main-page section#main-content main .card-list .card-image div span:hover {
+  background-color: black;
+  cursor: pointer;
+}
+section#main-page section#main-content main .card-list .card-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+section#main-page section#main-content main .card-list .card-detail .title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 9px;
+}
+section#main-page section#main-content main .card-list .card-detail .color-price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+}
+section#main-page section#main-content main .card-list .card-detail .color-price .color-list {
+  display: flex;
+  gap: 3px;
+}
+section#main-page section#main-content main .card-list .card-detail .color-price .color-list .color {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+}
+section#main-page section#main-content main .card-list .card-detail .color-price .price {
+  color: black;
+}
+
+/*# sourceMappingURL=main.css.map */

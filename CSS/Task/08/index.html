@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <!-- JS -->
+    <script src="./src/js/app.js" defer></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Task 08</title>
+  </head>
+  <body>
+    <section id="main-page">
+      <aside>
+        <div class="title">
+          <h1><i class="fa-solid fa-layer-group"></i><span>belzioo</span></h1>
+          <h1>Explore</h1>
+          <h1>
+            <i class="fa-solid fa-table-cells"></i><span>Categories</span
+            ><i class="fa-solid fa-angle-right"></i>
+          </h1>
+        </div>
+        <nav>
+          <table>
+            <tr>
+              <td>
+                <a href="#"><i class="fa-solid fa-medal"></i></a>
+              </td>
+              <td><a href="#">Best Offers</a></td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#"><i class="fa-solid fa-medal"></i></a>
+              </td>
+              <td><a href="#">Sell With Us</a></td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#"><i class="fa-solid fa-truck-fast"></i></a>
+              </td>
+              <td><a href="#">Track Oreder</a></td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#"><i class="fa-solid fa-book"></i></a>
+              </td>
+              <td><a href="#">Blog</a></td>
+            </tr>
+          </table>
+        </nav>
+        <div class="action">
+          <table>
+            <tr>
+              <td>
+                <a href="#"><i class="fa-solid fa-user-pen"></i></a>
+              </td>
+              <td><a href="#">Account</a></td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#"><i class="fa-solid fa-gear"></i></a>
+              </td>
+              <td><a href="#">Settings</a></td>
+            </tr>
+          </table>
+        </div>
+      </aside>
+      <section id="main-content">
+        <nav>
+          <div class="search-bar">
+            <form>
+              <select name="categories" id="categories">
+                <option value="all-categories">All Categories</option>
+              </select>
+              <div class="search">
+                <input type="text" placeholder="Search" id="search-input"/>
+              </div>
+              <div class="submit">
+                <button type="button" id="search-button">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+          <ul>
+            <li>
+              <a href="#"><i class="fa-regular fa-bell"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-regular fa-heart"></i></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-bag-shopping"></i><span>1</span></a
+              >
+              <div></div>
+            </li>
+          </ul>
+          <div class="profile">
+            <div class="profile-image">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="drop-down">
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+        </nav>
+        <header>
+          <div class="hero">
+            <div class="hero-image">
+              <img src="./public/assets/image/header-1.png" alt="shoes" />
+            </div>
+            <div class="hero-detail">
+              <div class="detail-1"><span></span>Special Offers</div>
+              <div class="detail-2">
+                <h1>Men Sheos</h1>
+                <p>Best Shoes Discount <b>35% OFF</b> On all Men Shoes!</p>
+              </div>
+              <div class="detail-3">
+                <div class="brand">
+                  <div class="brand-image">
+                    <img src="./public/assets/image/adidas.png" alt="">
+                  </div>
+                  <div class="brand-image">
+                    <img src="./public/assets/image/nike.png" alt="">
+                  </div>
+                  <div class="brand-image">
+                    <img src="./public/assets/image/fila.png" alt="">
+                  </div>
+                </div>
+                <div class="action">
+                  <button>
+                    <i class="fa-solid fa-angle-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="event-image">
+              <img src="./public/assets/image/header-2.png" alt="event" />
+            </div>
+          </div>
+        </header>
+        <main>
+          <nav>
+            <div class="title">
+              <h1>Top <span>Products</span><a href="#">View All</a></h1>
+            </div>
+            <div class="action">
+              <button><i class="fa-solid fa-angle-left"></i></button>
+              <button><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+          </nav>
+          <div class="card-list">
+            <!-- card -->
+            <div class="card">
+              <div class="card-image">
+                <div class="shipping">
+                  <p class="">Free Shipping</p>
+                </div>
+                <div class="discount">
+                  <i class="fa-solid fa-percent"></i>
+                </div>
+                <div class="image">
+                  <img src="./public/assets/image/shoes-1.png" alt="">
+                </div>
+                <div>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="card-detail">
+                <div class="title">
+                  <p>P</p>
+                  <p>Product Series</p>
+                </div>
+                <div class="color-price">
+                  <div class="color-list">
+                    <div class="color"></div>
+                    <div class="color"></div>
+                    <div class="color"></div>
+                  </div>
+                  <div class="price">
+                    <p>$999</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </section>
+    </section>
+  </body>
+</html>
