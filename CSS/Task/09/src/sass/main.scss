@@ -1,0 +1,865 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Onest:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+// Responsive Breakpoint
+$media-sm: 640px;
+$media-md: 768px;
+$media-lg: 1024px;
+$media-xl: 1280px;
+
+// @mixin responsive-design($breakpoint, $style) {
+//         @media only screen and (min-width: $breakpoint) {
+//         }
+// }
+
+// Font Variable
+$font-caveat: "Caveat", cursive;
+$font-poppins: "Poppins", sans-serif;
+$font-onest: "Onest", sans-serif;
+
+// Color Variable
+$primary-gray: #edeef9;
+$primary-yellow: #f3d661;
+$primary-orange: #eb6003;
+$primary-green: #7ce499;
+$primary-pink: #f4e6ff;
+$primary-purple: #817bf5;
+$primary-beige: #febc99;
+$primary-blue: #0277ff;
+$secondary-blue: #2884ff;
+$secondary-green: #c9ecd8;
+$secondary-purple: #cfc2ff;
+$secondary-gray: rgb(78, 78, 78);
+$third-blue: #68eaea;
+$fourth-blue: #cee3ff;
+
+section#main-page {
+    padding: 0 20px {
+        left: 0;
+    }
+    background-color: $primary-gray;
+    font: {
+        family: $font-poppins;
+    }
+    display: flex;
+    overflow: hidden;
+    min-height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    aside {
+        padding: 10px 0 {
+            // right: 10px;
+        }
+        position: relative;
+        width: 6%;
+        display: flex;
+        flex-direction: column;
+        background-color: $primary-gray;
+        gap: 85px;
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            font: {
+                size: 2rem;
+            }
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            li {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                &:hover {
+                    a i {
+                        background-color: $secondary-blue;
+                        color: white;
+                    }
+                }
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color: $secondary-gray;
+                    text: {
+                        decoration: none;
+                    }
+                    i {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 10px;
+                        border: {
+                            radius: 50%;
+                        }
+                        aspect-ratio: 1;
+                        font: {
+                            size: 1.5rem;
+                        }
+                    }
+                    span {
+                        font: {
+                            size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+        .help {
+            position: absolute;
+            padding: 30px 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            a {
+                &:hover {
+                    i {
+                        background-color: $secondary-blue;
+                        color: white;
+                    }
+                }
+                width: 100%;
+                display: flex;
+                gap: 6px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: $secondary-gray;
+                text: {
+                    decoration: none;
+                }
+                i {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+                    border: {
+                        radius: 50%;
+                    }
+                    aspect-ratio: 1;
+                    font: {
+                        size: 1.5rem;
+                    }
+                }
+                span {
+                    font: {
+                        size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+    section#main-content {
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+        // border: 1px solid black;
+        width: 94%;
+        nav#outer {
+            padding: 25px 35px {
+                bottom: 30px;
+            }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+            background-color: $primary-gray;
+            &::before {
+                content: "";
+                height: 40px;
+                width: 3px;
+                background-color: gray;
+                position: absolute;
+                left: 0;
+            }
+            ul {
+                &:nth-child(1) {
+                    gap: 20px;
+                    font: {
+                        size: 1.2rem;
+                        weight: 500;
+                    }
+                    li {
+                        &:hover {
+                            font: {
+                                weight: 600;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    gap: 25px;
+                    li {
+                        position: relative;
+                        a {
+                            font: {
+                                size: 1.2rem;
+                            }
+                            .ping {
+                                width: 7px;
+                                height: 7px;
+                                background-color: red;
+                                border: {
+                                    radius: 50%;
+                                }
+                            }
+                        }
+                        &:nth-child(2) {
+                            a {
+                                .ping {
+                                    position: absolute;
+                                    top: 2px;
+                                    right: -1px;
+                                }
+                            }
+                            a {
+                                .ping {
+                                    position: absolute;
+                                    top: 2px;
+                                    right: -2px;
+                                }
+                            }
+                        }
+                        &:nth-child(3) {
+                            a {
+                                .ping {
+                                    position: absolute;
+                                    top: 5px;
+                                    right: 1px;
+                                }
+                            }
+                        }
+                        &:nth-child(4) {
+                            width: 40px;
+                            aspect-ratio: 1;
+                            background-color: $primary-beige;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: {
+                                radius: 50%;
+                            }
+                            a {
+                                font: {
+                                    size: 1.4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                display: flex;
+                align-items: center;
+                list-style: none;
+                li {
+                    a {
+                        &:hover {
+                            color: black;
+                        }
+                        color: gray;
+                        text: {
+                            decoration: none;
+                        }
+                    }
+
+                    button {
+                        display: flex;
+                        gap: 6px;
+                        align-items: center;
+                        border: none {
+                            radius: 0.5rem;
+                        }
+                        background-color: $secondary-blue;
+                        color: white;
+                        padding: 12px 20px;
+                    }
+                }
+            }
+        }
+        main {
+            &::-webkit-scrollbar {
+                width: 0;
+            }
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            border-radius: 1rem;
+            overflow-y: auto;
+            padding: 30px 40px {
+                bottom: 0;
+            };
+            header {
+                display: flex;
+                justify-content: space-between;
+                gap: 50px;
+                .hero {
+                    position: relative;
+                    width: 65%;
+                    height: 350px;
+                    background-color: $primary-yellow;
+                    padding: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+                    border: {
+                        radius: 1.5rem;
+                    }
+                    img {
+                        top: -5%;
+                        right: 1%;
+                        position: absolute;
+                        z-index: 3;
+                        transform: rotate(-28deg);
+                    }
+                    h1 {
+                        font: {
+                            size: 2.5rem;
+                        }
+                    }
+                    .detail-product {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        background-color: white;
+                        width: 270px;
+                        border: {
+                            radius: 1rem;
+                        }
+                        padding: 20px;
+                        h1 {
+                            font: {
+                                size: 1rem;
+                                weight: 900;
+                            }
+                        }
+                        .price-list {
+                            display: flex;
+                            gap: 10px;
+                            .discount {
+                                color: red;
+                            }
+                            .price {
+                                text: {
+                                    decoration: line-through;
+                                }
+                            }
+                        }
+                        .display-color {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 0 5px;
+                            p {
+                                background-color: $fourth-blue;
+                                color: $primary-blue;
+                                padding: 3px 10px;
+                                border-radius: 1rem;
+                            }
+                            .color-list {
+                                display: flex;
+                                gap: 5px;
+                                align-items: center;
+                                .color-box {
+                                    cursor: pointer;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    .color {
+                                        width: 8px;
+                                        height: 8px;
+                                        border-radius: 50%;
+                                    }
+                                    padding: 0.5px;
+                                    border-radius: 50%;
+                                    &:nth-child(1) {
+                                        &:hover {
+                                            border: 1px solid black;
+                                        }
+                                        .color {
+                                            background-color: black;
+                                        }
+                                    }
+                                    &:nth-child(2) {
+                                        &:hover {
+                                            border: 1px solid red;
+                                        }
+                                        .color {
+                                            background-color: red;
+                                        }
+                                    }
+                                    &:nth-child(3) {
+                                        &:hover {
+                                            border: 1px solid orangered;
+                                        }
+                                        .color {
+                                            background-color: orangered;
+                                        }
+                                    }
+                                    &:nth-child(4) {
+                                        &:hover {
+                                            border: 1px solid rgb(222, 222, 11);
+                                        }
+                                        .color {
+                                            background-color: rgb(222, 222, 11);
+                                        }
+                                    }
+                                    &:nth-child(5) {
+                                        &:hover {
+                                            border: 1px solid green;
+                                        }
+                                        .color {
+                                            background-color: green;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .category {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        display: flex;
+                        span {
+                            color: white;
+                            display: inline-block;
+                            border: {
+                                top-right-radius: 1.5rem;
+                                bottom-left-radius: 1.5rem;
+                            }
+                            &:nth-child(1) {
+                                padding: 7px 20px;
+                                background-color: $primary-orange;
+                                z-index: 1;
+                            }
+
+                            &:nth-child(2) {
+                                padding: 7px 20px {
+                                    left: 30px;
+                                }
+                                margin: {
+                                    left: -17%;
+                                }
+                                background-color: $primary-blue;
+                            }
+                        }
+                    }
+                    .sold {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        padding: 10px;
+                        h1 {
+                            position: relative;
+                            transform: rotate(-30deg);
+                            font: {
+                                size: 3.5rem;
+                            }
+                            span {
+                                &:nth-child(1) {
+                                    // background-color: $primary-green;
+                                    max-width: max-content;
+                                    max-height: max-content;
+                                }
+                                &:nth-child(2) {
+                                    position: absolute;
+                                    top: -8%;
+                                    right: -27%;
+                                    font: {
+                                        size: 2.5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .graph {
+                    background-color: $secondary-green;
+                    padding: 10px;
+                    border-radius: 0.8rem;
+                    width: 35%;
+                    height: 350px;
+                    display: flex;
+                    .indikator {
+                        width: 10%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .top {
+                            display: flex;
+                            justify-content: center;
+                            .purple-box {
+                                width: 30%;
+                                border-radius: 0.3rem;
+                                height: 30px;
+                                background-color: $primary-purple;
+                            }
+                        }
+                        .progres {
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-around;
+                            padding: {
+                                top: 30px;
+                                bottom: 30px;
+                            }
+                        }
+                    }
+                    .content {
+                        width: 100%;
+                        .navigasi {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 0 20px;
+                            h1 {
+                                font: {
+                                    weight: 500;
+                                }
+                            }
+                            form {
+                                select {
+                                    &:focus {
+                                        outline: none;
+                                    }
+                                    cursor: pointer;
+                                    padding: 10px 25px;
+                                    background-color: $secondary-green;
+                                    color: green;
+                                    border: 3px solid white {
+                                        radius: 0.7rem;
+                                    }
+                                }
+                            }
+                        }
+                        .main {
+                            height: 85%;
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: flex-end;
+                            .candy {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 15px;
+                                .progres {
+                                    width: 10px;
+                                    background-color: $primary-beige;
+                                    height: 100px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            section#product {
+                display: flex;
+                width: 100%;
+                // border: 1px solid black;
+                margin: {
+                    top: 60px;
+                }
+                section#product-list {
+                    // padding: {
+                    //     right: 40px;
+                    // }
+                    width: 80%;
+                    // border: 1px solid black;
+                    nav#inner {
+                        position: relative;
+                        // border: 1px solid black;
+                        padding: 0 {
+                            left: 20px;
+                        }
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        &::before {
+                            content: "";
+                            width: 15px;
+                            height: 100%;
+                            border-radius: 0.3rem;
+                            background-color: $primary-green;
+                            position: absolute;
+                            left: 0;
+                        }
+                        h1 {
+                            font: {
+                                size: 1.2rem;
+                                weight: 500;
+                            }
+                        }
+                        .action {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            gap: 10px;
+                            form {
+                                select {
+                                    cursor: pointer;
+                                    color: gray;
+                                    &:focus {
+                                        outline: none;
+                                    }
+                                    padding: 8px 15px;
+                                    border: 2px solid $primary-gray {
+                                        radius: 0.5rem;
+                                    }
+                                }
+                            }
+                            button {
+                                background-color: $primary-blue;
+                                padding: 10px 17px;
+                                border: none {
+                                    radius: 0.5rem;
+                                }
+                                color: white;
+                                font: {
+                                    size: 0.9rem;
+                                }
+                            }
+                        }
+                    }
+                    .card-list {
+                        &::-webkit-scrollbar {
+                            height: 8px;
+                        }
+                        &::-webkit-scrollbar-track {
+                            height: 50px;
+                            width: 100%;
+                            background-color: white;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            background-color: gray;
+                            width: 100px;
+                            border-radius: 5rem;
+                        }
+                        padding: 25px 0 {
+                            bottom: 0;
+                        };
+                        display: flex;
+                        gap: 35px;
+                        overflow-x: auto;
+                        max-width: 100%;
+                        .card {
+                            &-image {
+                                position: relative;
+                                padding: 50px 25px;
+                                border-radius: 1rem;
+                                background-color: $primary-green;
+                                min-height: 220px;
+                                max-height: 220px;
+                                img {
+                                    transform: rotate(-30deg);
+                                    width: 180px;
+                                    margin: {
+                                        left: -30px;
+                                    }
+                                }
+                                .category {
+                                    display: flex;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    span {
+                                        color: white;
+                                        display: inline-block;
+                                        border: {
+                                            bottom-right-radius: 1rem;
+                                            top-left-radius: 1rem;
+                                        }
+                                        font: {
+                                            size: 0.7rem;
+                                        }
+                                        &:nth-child(1) {
+                                            padding: 5px 12px;
+                                            background-color: $primary-orange;
+                                            z-index: 1;
+                                        }
+
+                                        &:nth-child(2) {
+                                            padding: 5px 12px {
+                                                left: 30px;
+                                            }
+                                            margin: {
+                                                left: -17%;
+                                            }
+                                            background-color: $primary-blue;
+                                        }
+                                    }
+                                }
+                            }
+                            &-info {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                                padding: 10px 5px {
+                                    top: 20px;
+                                };
+                                h1 {
+                                    font: {
+                                        size: 1.1rem;
+                                        weight: 800;
+                                    }
+                                }
+                                .price {
+                                    display: flex;
+                                    gap: 15px;
+                                    p {
+                                        &:nth-child(1) {
+                                            color: red;
+                                        }
+                                        &:nth-child(2) {
+                                            text: {
+                                                decoration: line-through;
+                                            }
+                                        }
+                                    }
+                                }
+                                .display-color {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    padding: 0 {
+                                        right: 5px;
+                                    };
+                                    p {
+                                        background-color: $fourth-blue;
+                                        color: $primary-blue;
+                                        padding: 3px 20px;
+                                        border-radius: 1rem;
+                                        font: {
+                                            size: 0.8rem;
+                                        }
+                                    }
+                                    .color-list {
+                                        display: flex;
+                                        gap: 5px;
+                                        .color-box {
+                                            cursor: pointer;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            &:hover {
+                                                border: 1px solid black;
+                                            }
+                                            .color {
+                                                width: 8px;
+                                                height: 8px;
+                                                border-radius: 50%;
+                                                background-color: #0277ff;
+                                            }
+                                            padding: 1px;
+                                            border-radius: 50%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                section#product-rate {
+                    width: 20%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px 50px {
+                        bottom: 0;
+                    };
+                    .user {
+                        margin: {
+                            bottom: 30px;
+                        }
+                        background-color: $primary-green;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font: {
+                            size: 1.4rem;
+                        }
+                    }
+                    .i-reached {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        color: gray;
+                    }
+                    .reached {
+                        h1 {
+                            font: {
+                                size: 2.5rem;
+                                weight: 400;
+                            }
+                        }
+                        p {
+                            span {
+                                color: #58e680;
+                            }
+                        }
+                    }
+                    .up-down {
+                        background-color: $secondary-purple;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: -1px;
+                        margin: {
+                            bottom: 30px;
+                            top: 20px;
+                        }
+                        font: {
+                            size: 1.2rem;
+                        }
+                        i {
+                            transform: rotate(90deg);
+                        }
+                    }
+                    .i-engagement {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        color: gray;
+                    }
+                    .engagement {
+                        h1 {
+                            font: {
+                                size: 2.5rem;
+                                weight: 400;
+                            }
+                        }
+                        p {
+                            span {
+                                color: #58e680;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
